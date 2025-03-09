@@ -6,11 +6,11 @@ class Solution {
         
         for (int i = 0; i < nums.length; i++) {
             int x = target - nums[i];
-            if (hashMap.containsValue(x)) {
+            if (hashMap.containsKey(x)) {
                 return new int[]{hashMap.get(x), i};
             }
             hashMap.put(x, i);
         }
-        return new int[]{};
+        return null;
     }
 }
